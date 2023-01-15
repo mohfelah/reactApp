@@ -1,0 +1,98 @@
+.movie-add {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    margin: 2rem;
+}
+
+.App {
+    background-color: #03316a;
+}
+
+.movie__add {
+    margin: 1rem auto;
+}
+
+
+
+.modal-content {
+    background-color: #1f2833;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #66fcf1;
+}
+
+.modal-footer {
+    border-top: 1px solid #66fcf1;
+}
+
+.movies__container {
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.moviesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.movie-card {
+    overflow: hidden;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: none;
+    overflow: hidden;
+}
+
+.movie-card-body {
+    height: 100px;
+    background-color: hsl(213, 24%, 10%);
+    color: #fff;
+}
+
+.movie-card-description {
+    background-color: #fff;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: hsl(213, 24%, 10%);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover .movie-card-description {
+    transform: translateY(0%);
+}
+
+.cardImg {
+    width: 15rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.CardContent{
+    height: 10rem;
+    width: 15rem;
+}
+
+.descript{
+    height: 5.7rem;
+    width: 15rem;
+}
+
+.addhover:hover{
+    background-color: #66fcf1 !important;
+}
