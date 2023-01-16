@@ -42,6 +42,13 @@ export const movieData = [
         posterURL: "https://assets1.ignimgs.com/2019/08/28/joker-poster-1567009838218.jpg",
        /* videoURL: "5iaYLCiq5RM",*/
         rating: 4,
+    },
+    {
+        id: Math.random(),
+        title: "HITMAN",
+        description: "Agent 47, a hitman-for-hire, is trapped in a political conspiracy when he unknowingly kills his target's lookalike.",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BMjc2ODU1YWYtOGU1MS00ODQ3LTg1YmUtYmRmNjZmNzNiMjA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg",
+        rating: 5,
     }
 
 ]
