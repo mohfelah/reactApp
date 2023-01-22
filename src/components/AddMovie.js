@@ -26,6 +26,7 @@ export default function AddMovie({ movies, setMovies }) {
   const [addDescription, setAddDescription] = useState("");
   const [addPoster, setAddPoster] = useState("");
   const [addRating, setAddRating] = useState(0);
+  const [addTrailer, setAddTrailer] = useState("");
 
   const AddMovieFunction = (e) => {
     e.preventDefault();
@@ -36,6 +37,7 @@ export default function AddMovie({ movies, setMovies }) {
         title: addTitle,
         description: addDescription,
         posterURL: addPoster,
+        videoURL : addTrailer,
         rating: addRating,
       },
     ]);
@@ -73,9 +75,17 @@ export default function AddMovie({ movies, setMovies }) {
           />
           <TextField
             name="poster"
-            label="Movie Poster URL"
+            label="Movie Poster"
             variant="outlined"
             onChange={(e) => setAddPoster(e.target.value)}
+            sx={{ margin: "1rem 0 0.5rem" }}
+            fullWidth
+          />
+           <TextField
+            name="poster"
+            label="Movie Trailer"
+            variant="outlined"
+            onChange={(e) => setAddTrailer(e.target.value)}
             sx={{ margin: "1rem 0 0.5rem" }}
             fullWidth
           />

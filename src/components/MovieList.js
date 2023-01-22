@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AddMovie from "./AddMovie";
 import MovieCard from "./MovieCard";
 
@@ -21,10 +21,9 @@ const MovieList = ({ movies, setMovies, filterName, filterRating }) => {
           )
           .map((movie) => (
             <div key={movie.id}>
-              {/*<Link style={{ textDecoration: "none" }} to={`/${movie.title}`}>
+              <Link style={{ textDecoration: "none" }} to={`/${movie.title}`}>
                 <MovieCard movie={movie} key={movie.id} />
-          </Link>*/}
-          <MovieCard movie={movie} key={movie.id} />
+          </Link>
 
             </div>
           ))}

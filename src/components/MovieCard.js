@@ -11,7 +11,7 @@ import {
     return (
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
-          sx={{ height: 220 }}
+          sx={{ height: 300 }}
           image={movie.posterURL}
         />
         <CardContent className="CardContent">

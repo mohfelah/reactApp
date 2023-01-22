@@ -3,6 +3,9 @@ import { useState } from "react";
 import Filter from "./components/Filter";
 import MovieList from "./components/MovieList";
 import { movieData } from "./components/Data";
+import MovieTrailer from "./components/MovieTrailer";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
+
 
 
 function App() {
@@ -11,29 +14,32 @@ function App() {
   const [filterRating, setFilterRating] = useState(0);
 
   return (
-
-    <div className="App">
-      <div className="header">
-        <Filter
-          setFilterName={setFilterName}
-          filterRating={filterRating}
-          setFilterRating={setFilterRating}
-        />
+    <BrowserRouter>
+      <div className="App">
+        <div className="header">
+          <Filter
+            setFilterName={setFilterName}
+            filterRating={filterRating}
+            setFilterRating={setFilterRating}
+          />
+        </div>
+        
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MovieList
+                movies={movies}
+                setMovies={setMovies}
+                filterName={filterName}
+                filterRating={filterRating}
+              />
+            }
+          />
+          <Route path="/:title" element={<MovieTrailer movies={movies} />} />
+        </Routes>
       </div>
-
-
-      <div>
-      <MovieList
-        movies={movies}
-        setMovies={setMovies}
-        filterName={filterName}
-        filterRating={filterRating}
-      />
-      </div>
-
-
-    </div>
-
+    </BrowserRouter>
   );
 }
 
